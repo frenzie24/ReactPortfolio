@@ -1,13 +1,21 @@
 
 
 import Canvas from './Canvas.jsx'
-import Peon from '../scripts/peon.js'
+import Peon from '../scripts/peon.js';
+import React from 'react';
+import { useLocation, useBeforeUnload, useBlocker  } from 'react-router-dom';
+import { useEffect } from 'react';
 import '../video.css'
 import '../style.css'
 function PeonComponent() {
 
+  const location = useLocation();
+
+
   // const audioRef = useRef(null);
   // callback hook to pass to canvas
+
+
   let peons;
 
   let debugMode = false;
@@ -22,6 +30,7 @@ function PeonComponent() {
   bg.src = "https://cdna.artstation.com/p/marketplace/presentation_assets/000/500/478/large/file.jpg?1598966424"
   let music;
   let firstRun = true;
+  let gameLoop;
   const draw = context => {
 
 
@@ -30,16 +39,17 @@ function PeonComponent() {
       console.log('pushing new peon')
       let count = 0;
       peons.push(new Peon(context, debugMode));
-      let peonInterval = setInterval(() => {
+      /*  let peonInterval = setInterval(() => {
         let leon = new Peon(context, debugMode);
+
         leon.setActive(true);
         peons.push(leon);
         if (++count == 1)
           clearInterval(peonInterval);
       }, 10000);
+*/
 
-
-      setInterval(() => {
+      gameLoop = setInterval(() => {
         context.clearRect(0, 0, width, height)
         context.font = "48px serif";
 
@@ -118,6 +128,19 @@ function PeonComponent() {
 
 
   }
+
+  useBlocker (() => {
+    debugger;
+    if(peons && music){
+    peons = null; music.pause();
+    peons = undefined; music = undefined;
+    clearInterval(gameLoop);
+    }
+    console.log("URL changed");
+  });
+
+
+
 
   return (
     <div className={`container flex flex-row flex-wrap justify-center align-center w-full h-250`} tabIndex={0} onKeyDown={(ev) => { onKeyDown(ev) }}>
