@@ -1,7 +1,7 @@
 import React from 'react';
-import "../App.css"
+import "./App.css"
 export default function Resume() {
-    const path = './assets/images/resume.PNG'
+    const path = '/assets/images/resume.PNG'
     return (
         <figure className="flex flex-col flex-wrap items-center justify-center ">
         <img
