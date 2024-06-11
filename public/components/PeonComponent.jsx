@@ -17,8 +17,8 @@ function PeonComponent() {
   const botUI = new Image();
   const bg = new Image();
 
-  topUI.src = "./src/assets/topui.png";
-  botUI.src = "./src/assets/bottomui.png";
+  topUI.src = "./assets/topui.png";
+  botUI.src = "./assets/bottomui.png";
   bg.src = "https://cdna.artstation.com/p/marketplace/presentation_assets/000/500/478/large/file.jpg?1598966424"
   let music;
   let firstRun = true;
@@ -73,7 +73,7 @@ function PeonComponent() {
 
   function handleCanvasClick(e) {
     if (firstRun) {
-      music = new Audio("./src/assets/sounds/Orc02.mp3");
+      music = new Audio("./assets/sounds/Orc02.mp3");
       music.addEventListener("canplaythrough", (ev) => {
         console.count('loading audtio')
         music.play()

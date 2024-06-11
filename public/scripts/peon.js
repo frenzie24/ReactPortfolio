@@ -1,6 +1,6 @@
 
 import peonanim from './peon-anim.js'
-const path = './src/assets/peon-john.png'
+const path = './assets/peon-john.png'
 class Peon {
     constructor(context, debugMode) {
         this.img = new Image();
@@ -35,7 +35,7 @@ class Peon {
     loadAudio = async () => {
         try {
 
-            const audiopath = `./src/assets/sounds/`;
+            const audiopath = `./assets/sounds/`;
 
             this.jobsDone = new Audio(`${audiopath}WorkComplete.ogg`);
             this.jobsDone.addEventListener('ended', () => {
