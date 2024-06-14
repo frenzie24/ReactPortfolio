@@ -8,11 +8,13 @@ export default function Portfolio() {
     name: 'Jeans'
   }
   return (
-    <section className="max-w-[900px] grid grid-cols-1 md:grid-cols-3 gap-4 p-4" >
+    <section className="max-w-[900px] h-fit bg-gray-500 grid grid-cols-1 md:grid-cols-3 gap-4 p-4 " >
       <Tile
       url={jeans.url}
       image={jeans.image}
-      name={jeans.name}></Tile>
+      name={jeans.name}>
+
+      </Tile>
       <Tile
       url={'https://www.npmjs.com/package/@frenzie24/logger'}
       image={"./src/assets/images/loggerSS.png"}
@@ -23,7 +25,9 @@ export default function Portfolio() {
       <Tile
       url={jeans.url}
       image={jeans.image}
-      name={jeans.name}></Tile>
+      name={jeans.name}>
+
+      </Tile>
       <Tile
       url={'https://www.youtube.com/watch?v=t6q0KIFRm2s'}
       image={"./src/assets/images/ardemo.png"}
@@ -34,7 +38,9 @@ export default function Portfolio() {
       <Tile
       url={jeans.url}
       image={jeans.image}
-      name={jeans.name}></Tile>
+      name={jeans.name}>
+
+      </Tile>
       <Tile
       url={'https://www.npmjs.com/package/@frenzie24/logger'}
       image={"./src/assets/images/loggerSS.png"}

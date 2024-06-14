@@ -8,9 +8,9 @@ export default function Tile(props) {
 
   return (
 
-      <a href={url}>
-        <figure className='h-[100px] w-fit p-2 flex flex-row flex-wrap jusity-center' >
-          <img src={image} alt="Project Preview" className="w-full h-full" />
+      <a href={url} className='h-fit m-2 flex flex-row flex-wrap jusity-center items-center bg-[#293D49] m-auto transition ease-in-out duration-100 hover:translate-y-1 hover:scale-[110%] antialiased hover:subpixel-antialiased'>
+        <figure >
+          <img src={image} alt="Project Preview" className="w-fit " />
           <figcaption className='w-full bg-[#293D49]'>{name} </figcaption>
         </figure>
       </a>

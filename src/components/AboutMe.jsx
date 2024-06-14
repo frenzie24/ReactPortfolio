@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function About() {
     return (
-        <section className="flex flex-col items-center justify-center text-white">
-            <div className="w-full min-w-xs w-11/12">
-                <div className="bg-[#293D49] shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <section className="flex flex-row items-center justify-center text-white rounded-md max-w-[900px]">
+            <div className="w-full min-w-xs ">
+                <div className="bg-[#293D49] shadow-md px-8 pt-6 pb-8 mb-4 w-full">
                     <h2 className="text-2xl font-bold mb-4">About Me</h2>
                     <p className="mb-4">
                         Hi, I'm Charles Gross, a full-stack developer with 2-3 years of experience. I specialize in React, JavaScript, CSS, and HTML5 Canvas and I have a passion for creating intuitive and dynamic user experiences.

@@ -17,7 +17,7 @@ class Peon {
         this.currentFrames = peonanim.walkDown.frames;
         this.animSpeed = peonanim.walkUp.frameTime;
         this.reverseFrames = false;
-        this.lastFrameTime;
+        this.lastFrameTime =0;
         this.destination;
         this.timer = 0;
         this.img.onload = () => {
