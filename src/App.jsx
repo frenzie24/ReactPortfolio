@@ -28,6 +28,7 @@ export default function App() {
     blob.push(PeonComponent.toString());
     blob.push(Contact.toString());
     blob.push(Peon.toString());
+    blob.push(Portfolio.toString())
     blob.push(Resume.toString());
     blob.push(Footer.toString());
 
@@ -41,14 +42,13 @@ export default function App() {
   })
 
   return (
-    <div>
+    <div className='w-full flex flex-row flex-wrap jusitfy-center'>
 
-      <div ref={headingRef} className="w-full h-screen absolute top-0 left-0 bg-black text-gray-800 z-[-1] pointer-events-none text-xs" ><h4 className='w-[1000px] mx-auto'>{...bgtext}</h4></div>
-      <div className='flex flex-row flex-wrap justify-center items-start pt-8'>
-        <NavBar></NavBar>
         <Outlet />
+
         <Footer />
-      </div>
+      <div ref={headingRef} className="w-screen h-fit absolute top-0 left-0 bg-black text-gray-800 z-[-1] pointer-events-none text-xs" ><h4 className='w-[1000px] mx-auto'>{...bgtext}</h4></div>
+
     </div>
 
   );

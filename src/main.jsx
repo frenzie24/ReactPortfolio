@@ -16,6 +16,7 @@ import Contact from './components/Contact.jsx'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx';
 import Resume from './components/Resume.jsx';
+import ResumeView from './components/ResumeView.jsx';
 // Define the accessible routes, and which components respond to which URL
 const router = createBrowserRouter([
   {
@@ -40,12 +41,8 @@ const router = createBrowserRouter([
         element: <Portfolio />,
       },
       {
-        path: '/Contact',
-        element: <Contact />,
-      },
-      {
-        path: '/Resume',
-        element: <Resume />,
+        path: '/ResumeView',
+        element: <ResumeView />,
       },
     ],
   },

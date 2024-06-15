@@ -9,7 +9,6 @@ export default function Header() {
           <li><a href="#peon" className="hover:text-blue-500">PeonComponent</a></li>
           <li><a href="#about" className="hover:text-blue-500">About Me</a></li>
           <li><a href="#portfolio" className="hover:text-blue-500">Portfolio</a></li>
-          <li><a href="#contact" className="hover:text-blue-500">Contact</a></li>
           <li><a href="#resume" className="hover:text-blue-500">Resume</a></li>
         </ul>
       </nav>

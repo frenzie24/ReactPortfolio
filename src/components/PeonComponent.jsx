@@ -3,10 +3,9 @@
 import Canvas from './Canvas.jsx'
 import Peon from '../scripts/peon.js';
 import React from 'react';
-import { useLocation, useBeforeUnload, useBlocker  } from 'react-router-dom';
+import { useLocation, useBeforeUnload, useBlocker } from 'react-router-dom';
 import { useEffect } from 'react';
 import '../video.css'
-import '../style.css'
 function PeonComponent() {
 
   const location = useLocation();
@@ -19,7 +18,7 @@ function PeonComponent() {
   let peons;
 
   let debugMode = false;
-  const width =900;
+  let width = screen.width;
   const height = 500;
   const topUI = new Image();
   const botUI = new Image();
@@ -63,7 +62,7 @@ function PeonComponent() {
         context.textAlign = 'center';
         context.fillText(gratz, width / 2 - context.measureText(gratz).width / 4, height - 50);
 
-        context.drawImage(bg, 0, (height - bg.height) / 2)
+        context.drawImage(bg, 0, (height - bg.height) / 2, bg.width, bg.height, 0, (height - bg.height)/2, bg.width*2, bg.height );
         peons.forEach(peon => {
           peon.update();
           if (peon.getDebugMode() != debugMode) peon.setDebugMode(debugMode);
@@ -129,12 +128,12 @@ function PeonComponent() {
 
   }
 
-  useBlocker (() => {
+  useBlocker(() => {
     debugger;
-    if(peons && music){
-    peons = null; music.pause();
-    peons = undefined; music = undefined;
-    clearInterval(gameLoop);
+    if (peons && music) {
+      peons = null; music.pause();
+      peons = undefined; music = undefined;
+      clearInterval(gameLoop);
     }
     console.log("URL changed");
   });
@@ -143,15 +142,16 @@ function PeonComponent() {
 
 
   return (
-    <div className={`container flex flex-row flex-wrap justify-center align-center w-full h-250`} tabIndex={0} onKeyDown={(ev) => { onKeyDown(ev) }}>
+    <div className='flex flex-row flex-wrap justify-center align-center w-screen'>
+      <div className={`container flex flex-row flex-wrap justify-center align-center w-screen h-250`} tabIndex={0} onKeyDown={(ev) => { onKeyDown(ev) }}>
 
 
 
 
 
-      <Canvas handleClick={handleCanvasClick} draw={draw} height={height} width={width} on />
+        <Canvas handleClick={handleCanvasClick} draw={draw} height={height} width={width} on />
 
-    </div>
+      </div></div>
   )
 }
 
