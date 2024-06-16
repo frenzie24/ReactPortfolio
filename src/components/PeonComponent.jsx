@@ -18,7 +18,7 @@ function PeonComponent() {
   let peons;
 
   let debugMode = false;
-  let width = screen.width;
+  let width = 1000;
   const height = 500;
   const topUI = new Image();
   const botUI = new Image();
@@ -133,10 +133,6 @@ function PeonComponent() {
   return (
     <div className='flex flex-row flex-wrap justify-center align-center w-screen'>
       <div className={`container flex flex-row flex-wrap justify-center align-center w-screen h-250`} tabIndex={0} onKeyDown={(ev) => { onKeyDown(ev) }}>
-
-
-
-
 
         <Canvas handleClick={handleCanvasClick} draw={draw} height={height} width={width} on />
 

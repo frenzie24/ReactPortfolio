@@ -8,8 +8,8 @@ export default function Portfolio() {
     name: 'Jeans'
   }
   return (
-    <div className='w-screen flex flex-row flex-wrap justify-center'>
-      <section className="max-w-[900px] h-fit bg-[#293D49] grid grid-cols-1 md:grid-cols-3 gap-4 p-4 " >
+    <div className='w-screen flex flex-row flex-wrap justify-center [&_*]:bg-black [&_*]:bg-opacity-50 [&_*]:backdrop-blur-sm'>
+      <section className="max-w-[900px] h-fit bg-black bg-opacity-50 backdrop-blur-sm grid grid-cols-1 md:grid-cols-3 gap-4 p-4 " >
         <Tile
           url={jeans.url}
           image={jeans.image}

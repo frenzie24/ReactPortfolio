@@ -4,8 +4,6 @@ import '../App.css';
 // Import your individual components
 import AboutMe from './AboutMe';
 import Portfolio from './Portfolio';
-import Contact from './Contact';
-import Resume from './Resume';
 import PeonComponent from './PeonComponent';
 import ResumeView from './ResumeView'
 function Home() {
@@ -13,10 +11,10 @@ function Home() {
 
     <section className='flex flex-row flex-wrap justify-center'>
       <ul>
-        <li className="py-4" ><PeonComponent /></li>
-        <li className="py-8" ><AboutMe /></li>
-        <li className="py-8" ><Portfolio /></li>
-        <li className='py-8' ><ResumeView /></li>
+        <li className ><PeonComponent /></li>
+        <li className="pt-8" ><AboutMe /></li>
+        <li className="pt-8" ><Portfolio /></li>
+        <li className='pt-8' ><ResumeView /></li>
 
       </ul>
     </section>

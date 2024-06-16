@@ -4,7 +4,7 @@ export default function About() {
     return (
         <section className="w-screen flex flex-row items-center justify-center text-white rounded-md ">
             <div className="w-full min-w-xs max-w-[900px]">
-                <div className="bg-[#293D49] shadow-md px-8 pt-6 pb-8 mb-4 w-full">
+                <div className="bg-black bg-opacity-50 backdrop-blur-sm shadow-md px-8 pt-6 pb-8 mb-4 w-full">
                     <h2 className="text-2xl font-bold mb-4">About Me</h2>
                     <p className="mb-4">
                         Hi, I'm Charles Gross, a full-stack developer with 2-3 years of experience. I specialize in React, JavaScript, CSS, and HTML5 Canvas and I have a passion for creating intuitive and dynamic user experiences.

@@ -15,3 +15,26 @@
   animation: moveDownAndUp 120s ease-in-out infinite alternate;
 
 }
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.blinking-cursor {
+  display: inline-block;
+  margin-right: 5px;
+  width: 2px;
+  height: 1em;
+  background-color: currentColor;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes parallax {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}

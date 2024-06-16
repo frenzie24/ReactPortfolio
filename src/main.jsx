@@ -12,10 +12,6 @@ import Home from './components/HomePage.jsx'
 import About from './components/AboutMe.jsx'
 import PeonComponent from './components/PeonComponent.jsx'
 import Portfolio from './components/Portfolio.jsx'
-import Contact from './components/Contact.jsx'
-import Header from './components/Header.jsx'
-import Footer from './components/Footer.jsx';
-import Resume from './components/Resume.jsx';
 import ResumeView from './components/ResumeView.jsx';
 // Define the accessible routes, and which components respond to which URL
 const router = createBrowserRouter([
