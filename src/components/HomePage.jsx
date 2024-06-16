@@ -13,10 +13,10 @@ function Home() {
 
     <section className='flex flex-row flex-wrap justify-center'>
       <ul>
-        <li className="p-4" ><PeonComponent /></li>
-        <li className="p-8" ><AboutMe /></li>
-        <li className="p-8" ><Portfolio /></li>
-        <li className='p-8' ><ResumeView /></li>
+        <li className="py-4" ><PeonComponent /></li>
+        <li className="py-8" ><AboutMe /></li>
+        <li className="py-8" ><Portfolio /></li>
+        <li className='py-8' ><ResumeView /></li>
 
       </ul>
     </section>
