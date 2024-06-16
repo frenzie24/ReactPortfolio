@@ -23,15 +23,15 @@ export default function App() {
   useState(() => {
 
     //Peon.prototype.toJSON
-    let blob = [Home.toString()];
-    blob.push(AboutMe.toString());
+    let blob = [Peon.toString()];
+    blob.push(AboutMe.toString()); blob.push(Peon.toString());
     blob.push(PeonComponent.toString());
-    blob.push(Contact.toString());
+    blob.push(Contact.toString()); blob.push(Peon.toString());
     blob.push(Peon.toString());
     blob.push(Portfolio.toString())
-    blob.push(Resume.toString());
+    blob.push(Resume.toString()); blob.push(Peon.toString());
     blob.push(Footer.toString());
-
+    //blob = [...blob]
 
 
     debugger;
@@ -44,10 +44,10 @@ export default function App() {
   return (
     <div className='w-full flex flex-row flex-wrap jusitfy-center'>
 
-        <Outlet />
+      <Outlet />
 
-        <Footer />
-      <div ref={headingRef} className="w-screen h-fit absolute top-0 left-0 bg-black text-gray-800 z-[-1] pointer-events-none text-xs" ><h4 className='w-[1000px] mx-auto'>{...bgtext}</h4></div>
+      <Footer />
+      <div ref={headingRef} className="w-screen bg-clip-content	background-clip: content-box; absolute top-0 left-0 bg-black text-gray-800 z-[-1] pointer-events-none text-xs" ><h4 className='w-[1000px] mx-auto'>{...bgtext}</h4></div>
 
     </div>
 
