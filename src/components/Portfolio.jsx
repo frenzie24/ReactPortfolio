@@ -9,7 +9,7 @@ export default function Portfolio() {
   }
   return (
     <div className='w-screen flex flex-row flex-wrap justify-center'>
-      <section className="max-w-[900px] h-fit bg-gray-500 grid grid-cols-1 md:grid-cols-3 gap-4 p-4 " >
+      <section className="max-w-[900px] h-fit bg-[#293D49] grid grid-cols-1 md:grid-cols-3 gap-4 p-4 " >
         <Tile
           url={jeans.url}
           image={jeans.image}

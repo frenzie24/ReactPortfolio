@@ -33,7 +33,7 @@ function PeonComponent() {
   const draw = context => {
 
 
-    if (!peons) {
+    if (firstRun) {
       peons = [];
       console.log('pushing new peon')
       let count = 0;
@@ -50,17 +50,6 @@ function PeonComponent() {
 
       gameLoop = setInterval(() => {
         context.clearRect(0, 0, width, height)
-        context.font = "48px serif";
-
-        context.textAlign = 'center';
-        context.strokeStyle = "Crimson"
-
-        //context.fillText="black"
-        const gratz = "GGWP, man!"
-
-        context.strokeText(gratz, width / 2 - context.measureText(gratz).width / 4, height - 50);
-        context.textAlign = 'center';
-        context.fillText(gratz, width / 2 - context.measureText(gratz).width / 4, height - 50);
 
         context.drawImage(bg, 0, (height - bg.height) / 2, bg.width, bg.height, 0, (height - bg.height)/2, bg.width*2, bg.height );
         peons.forEach(peon => {
@@ -86,7 +75,7 @@ function PeonComponent() {
       music.addEventListener("canplaythrough", (ev) => {
         console.count('loading audtio')
         music.play()
-
+        music.volume = 0.25;
       });
       music.addEventListener('ended', function () {
         music.currentTime = 0;
