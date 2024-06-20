@@ -18,7 +18,7 @@ export default function NavBar() {
           {renderCursor('/')}Home
           </Link>
         </li>
-        <li className="nav-item"><Link to="/peon" className={currentPage === '/peon' ? 'nav-link active' : 'nav-link'}>{renderCursor('/peon')}Leon the Peon</Link></li>
+       {/* <li className="nav-item"><Link to="/peon" className={currentPage === '/peon' ? 'nav-link active' : 'nav-link'}>{renderCursor('/peon')}Leon the Peon</Link></li>*/}
         <li className="nav-item"><Link to="/about" className={currentPage === '/about' ? 'nav-link active' : 'nav-link'}>{renderCursor('/about')}About Me</Link></li>
         <li className="nav-item"><Link to="/portfolio" className={currentPage === '/portfolio' ? 'nav-link active' : 'nav-link'}>{renderCursor('/portfolio')}Portfolio</Link></li>
         <li className="nav-item"><Link to="/resumeview" className={currentPage === '/resumeview' ? 'nav-link active' : 'nav-link'}>{renderCursor('/resumeview')}Resume</Link></li>

@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <section className="flex flex-col items-center justify-center pt-4 text-gray-200">
       <div className="w-full max-w-xs">
-        <div className="shadow-md rounded px-8 pt-6 pb-8 mb-4 bg-black bg-opacity-50 backdrop-blur-sm">
+        <div className="shadow-md rounded px-8 pt-6 pb-8 mb-4 ">
           <div className="mb-4">
             <label className="block text-sm font-bold mb-2">Let's Get in Touch!</label>
             <p className="leading-tight">Charles Gross</p>

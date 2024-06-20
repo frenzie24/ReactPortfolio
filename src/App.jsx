@@ -103,9 +103,10 @@ export default function App() {
         let ic = inputCursor + 1;
         let newtext = bgInput + bloo.charAt(ic);
         setInputCursor(ic);
-        setTimeout(() => {
+       let timer = setTimeout(() => {
           setBgInput(newtext);
-        }, 1)
+          clearTimeout(timer);
+        }, 100)
       }
     }
   }, [bgtext, blob, bgInput])
@@ -118,8 +119,9 @@ export default function App() {
   }, [outletRef.current]);
 
   return (
-    <div className='w-full flex flex-row flex-wrap justify-center'>
-      <div className="bg-black bg-opacity-5 backdrop-blur-[1px]" ref={outletRef}>
+    <div className='w-screen flex flex-row flex-wrap justify-center'>
+
+      <div className="" ref={outletRef}>
         <Outlet />
       </div>
 
@@ -127,8 +129,10 @@ export default function App() {
         <Footer />
       </div>
 
-      <div ref={headingRef} className={`w-screen h-screen fixed bottom-0 left-0 bg-black text-yellow-400 z-[-1] pointer-events-none text-xs`}>
-        <h4 className={`w-[1000px] h-[${height ? height : 1000}px] fixed bottom-0 left-[25%] mx-auto text-clip overflow-hidden border-2 border-double border-zinc-800 mx-auto px-4 py-12`}>{...bgInput + '_'}</h4>
+      <div ref={headingRef} className={`w-screen h-screen fixed bottom-0 left-0 bg-black text-gray-400 z-[-1] pointer-events-none text-xs`}>
+        <div className='w-full h-full flex items-end'>
+        <h4 className={`w-10/12 h-[${height ? height : 1000}px] text-clip overflow-hidden border-2 border-double border-zinc-800 mx-auto px-4 py-12`}>{...bgInput + '_'}</h4>
+        </div>
       </div>
     </div>
 

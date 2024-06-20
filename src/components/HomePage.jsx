@@ -9,9 +9,8 @@ import ResumeView from './ResumeView'
 function Home() {
   return (
 
-    <section className='flex flex-row flex-wrap justify-center'>
+    <section className='flex flex-row max-w-[900px] w-[900px] flex-wrap justify-center'>
       <ul>
-        <li className ><PeonComponent /></li>
         <li className="pt-8" ><AboutMe /></li>
         <li className="pt-8" ><Portfolio /></li>
         <li className='pt-8' ><ResumeView /></li>
