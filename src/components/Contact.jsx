@@ -5,9 +5,9 @@ export default function Contact() {
   const githubUsername = 'frenzie24';
 
   return (
-    <section className="flex flex-col items-center bg-[#293D49] justify-centerpt-4 text-white">
-      <div className="w-full max-w-xs">
-        <div className="shadow-md rounded px-8 pt-6 pb-8 mb-4 ">
+    <section className="flex flex-col items-center justify-center bg-[#293D49] bg-opacity-90 pt-4 text-gray-200">
+      <div className="w-fit max-w-xs">
+        <div className="shadow-md rounded p-8 mb-4 ">
 
             <label className="block text-sm text-center font-bold mb-2">Let's Get in Touch!</label>
             <p className="leading-tight font-medium">Charles Gross</p>
