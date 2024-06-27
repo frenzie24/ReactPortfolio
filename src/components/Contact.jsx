@@ -5,7 +5,7 @@ export default function Contact() {
   const githubUsername = 'frenzie24';
 
   return (
-    <section className="flex flex-col items-center justify-centerpt-4 text-white">
+    <section className="flex flex-col items-center bg-[#293D49] justify-centerpt-4 text-white">
       <div className="w-full max-w-xs">
         <div className="shadow-md rounded px-8 pt-6 pb-8 mb-4 ">
 

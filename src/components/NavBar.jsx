@@ -15,9 +15,9 @@ export default function NavBar() {
 
   return (
 
-    <nav className='w-fit flex justify-center items-center z-50  '>
+    <nav className='lg:w-fit xs:w-full sm:w-full flex flex-row flex-wrap justify-center items-center z-50  '>
 
-      <ul className=" flex flex-row flex-wrap items-center space-4 [&_*]:text-white nav nav-tabs">
+      <ul className=" flex flex-row flex-wrap justify-center items-center space-4 [&_*]:text-white nav nav-tabs">
         <li className="nav-item">
           <Link to="/" className={currentPage === '/' ? 'nav-link active' : 'nav-link'}>
             {renderCursor('/')}Home
