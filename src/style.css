@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 .image {
   position: absolute; /* Positions the image relative to the nearest positioned ancestor */
   top: 0; /* Positions the image at the top of the container */

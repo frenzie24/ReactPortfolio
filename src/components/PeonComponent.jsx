@@ -132,7 +132,7 @@ function PeonComponent() {
 
   return (
     <div className='flex flex-row flex-wrap justify-center align-center w-screen'>
-      <div className={`container flex flex-row flex-wrap justify-center align-center max-w-[900px] h-250`} tabIndex={0} onKeyDown={(ev) => { onKeyDown(ev) }}>
+      <div className={`container flex flex-row flex-wrap justify-center align-center max-w-[800px] sm:w-fit h-250`} tabIndex={0} onKeyDown={(ev) => { onKeyDown(ev) }}>
 
         <Canvas handleClick={handleCanvasClick} draw={draw} height={height} width={width} on />
 

@@ -20,6 +20,20 @@
     opacity: 0;
   }
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.fadeInAnimation {
+  animation: fadeIn 2s ease-in forwards;
+}
+
 
 .blinking-cursor {
   display: inline-block;
@@ -29,6 +43,8 @@
   background-color: currentColor;
   animation: blink 1s step-start infinite;
 }
+
+
 
 @keyframes parallax {
   from {
