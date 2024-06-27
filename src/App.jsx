@@ -102,10 +102,7 @@ export default function App() {
     //blob.push(Footer.toString());
     //blob = [...blob]
 
-    _blob.map((b) => {
-      b = b.toString()
-      return b.match('\\n') != -1 ? b.split('\\n') : b;
-    });
+
 
     _blob = flattenArray(_blob)
 
