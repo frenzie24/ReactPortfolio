@@ -83,7 +83,7 @@ export default function App() {
         let timer = setTimeout(() => {
           setBgInput(newtext);
           clearTimeout(timer);
-        }, 100)
+        }, 50)
       }
     }
   }, [bgtext, blob, bgInput])
