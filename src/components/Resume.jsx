@@ -4,7 +4,7 @@ export default function Resume() {
     const path = './src/assets/images/resume.png'
     return (
         <article className='m-4'>
-            <h1 className='font-bold text-2xl'> Charles Gross -Resume</h1>
+            <h1 className='font-bold text-2xl'> Charles Gross - Resume</h1>
 
             <h2 className='text-xl font-medium my-2'> Summary</h2>
             <div className='ml-4'>
