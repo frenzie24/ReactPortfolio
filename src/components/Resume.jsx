@@ -4,9 +4,9 @@ export default function Resume() {
     const path = './src/assets/images/resume.png'
     return (
         <article className='m-4'>
-            <h1 className='font-bold text-2xl'> Charles Gross</h1>
-            <h2 className='font-semibold text-2xl'>Resume</h2>
-            <h3 className='text-xl font-medium'> Summary</h3>
+            <h1 className='font-bold text-2xl'> Charles Gross -Resume</h1>
+
+            <h2 className='text-xl font-medium my-2'> Summary</h2>
             <div className='ml-4'>
             <p>I love to learn new software environments and take on new challenges! I am experienced in all stages of software development and have pursued client-based work on my own and as part of a team.
             </p>
@@ -17,7 +17,7 @@ export default function Resume() {
                 Future goal: React VR
             </p>
             </div>
-            <h3 className='text-xl  font-medium'> Experience</h3>
+            <h2 className='text-xl  font-medium my-2'> Experience</h2>
             <div className='font-medium'>Full-Stack Student</div>
             <div className='ml-4'> March 2024 – June 2024<br></br>
             Panama City, FL<br></br></div>
@@ -27,7 +27,7 @@ export default function Resume() {
 
            <div className='m-4'> I worked with team members on client projects. We developed web apps and native applications mobile applications using <span className='font-bold'>HTML 5, JavaScript, jQuery, Node.js, MySQL, Objective C, Java, React, and React Native.</span>
            </div>
-            <h3 className='text-xl  font-medium'> Education</h3>
+            <h2 className='text-xl  font-medium my-2'> Education</h2>
             <div className='ml-4'>  Southern Polytechnic State University<br></br>
             Computer Science and Engineering · (2010 - 2013)<br></br>
             UCF Full Stack Bootcamp March 2024 - Grauduate<br></br>
