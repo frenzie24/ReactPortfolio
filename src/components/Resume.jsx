@@ -3,11 +3,36 @@ import "../App.css"
 export default function Resume() {
     const path = './src/assets/images/resume.png'
     return (
-        <>
-            <figure className="flex flex-col flex-wrap items-center justify-center ">
-                <img src={path} alt="Charles Gross Resume" />
-                <figcaption>Pls take a gander at me resume</figcaption>
-            </figure>
-        </>
+        <article className='m-4'>
+            <h1 className='font-bold text-2xl'> Charles Gross</h1>
+            <h2 className='font-semibold text-2xl'>Resume</h2>
+            <h3 className='text-xl font-medium'> Summary</h3>
+            <div className='ml-4'>
+            <p>I love to learn new software environments and take on new challenges! I am experienced in all stages of software development and have pursued client-based work on my own and as part of a team.
+            </p>
+            <p>
+                I am currently focusing on developing in the MERN stack.  I am using React.js for front-end development, Express.js and MongoDB for back-end development, and Node.js as the JavaScript runtime environment.
+            </p>
+            <p>
+                Future goal: React VR
+            </p>
+            </div>
+            <h3 className='text-xl  font-medium'> Experience</h3>
+            <div className='font-medium'>Full-Stack Student</div>
+            <div className='ml-4'> March 2024 – June 2024<br></br>
+            Panama City, FL<br></br></div>
+            <div className='font-medium'>Self - Software Developer</div>
+            <div className='ml-4'> September 2012 - February 2022<br></br>
+            Marietta, GA<br></br></div>
+
+           <div className='m-4'> I worked with team members on client projects. We developed web apps and native applications mobile applications using <span className='font-bold'>HTML 5, JavaScript, jQuery, Node.js, MySQL, Objective C, Java, React, and React Native.</span>
+           </div>
+            <h3 className='text-xl  font-medium'> Education</h3>
+            <div className='ml-4'>  Southern Polytechnic State University<br></br>
+            Computer Science and Engineering · (2010 - 2013)<br></br>
+            UCF Full Stack Bootcamp March 2024 - Grauduate<br></br>
+            </div>
+
+        </article>
     );
 }
