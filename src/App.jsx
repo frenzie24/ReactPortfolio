@@ -112,7 +112,7 @@ export default function App() {
 
     let j = -1;
     // setInterval(() => {
-      setBlob(["import App from './App.jsx\\n'", ..._blob]);
+      setBlob(["import App from './App.jsx\'", ..._blob]);
       setBgText('');
       setBgInput('');
    /* setTimeout(() => {

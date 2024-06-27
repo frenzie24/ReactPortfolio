@@ -23,7 +23,7 @@ function Home() {
     <>
 
 
-        <section className={`flex flex-row max-w-[800px] sm:w-fit w-[800px] flex-wrap py-10 justify-center fadeInAnimation`}>
+        <section className={`flex flex-row max-w-[800px] sm:w-fit  flex-wrap py-10 justify-center fadeInAnimation`}>
           <ul>
             <li className="pt-8"><AboutMe /></li>
             <li className="pt-8"><Portfolio /></li>
