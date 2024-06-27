@@ -9,7 +9,7 @@ const TypingAnimation = ({ useAnimationComplete }) => {
         if (message.length < fullMessage.length) {
             setTimeout(() => {
                 setMessage(fullMessage.slice(0, message.length + 1));
-            }, 150); // Typing speed in milliseconds
+            }, 75); // Typing speed in milliseconds
         }
 
         if (message.length == fullMessage.length) {
