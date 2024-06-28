@@ -25,7 +25,7 @@ export default function Resume() {
             <div className='ml-4 my-1'> September 2012 - February 2022<br></br>
             Marietta, GA</div>
 
-           <div className='ml-6'> I worked with team members on client projects. We developed web apps and native applications mobile applications using <span className='font-bold'>HTML 5, JavaScript, jQuery, Node.js, MySQL, Objective C, Java, React, and React Native.</span>
+           <div className='ml-6'> I worked with team members on client projects. We developed web apps and native mobile applications using <span className='font-bold'>HTML 5, JavaScript, jQuery, Node.js, MySQL, Objective C, Java, React, and React Native.</span>
            </div>
             <h2 className='text-xl font-medium my-1'> Education</h2>
             <div className='ml-4'>  Southern Polytechnic State University<br></br>
