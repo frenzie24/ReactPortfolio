@@ -21,9 +21,9 @@ const TypingAnimation = ({ useAnimationComplete }) => {
     }, [message, fullMessage]);
 
     return (
-        <div className='absolute top-0 left-0 [&_*]:text-l bg-black text-white '>
+        <div className='absolute top-0 left-0 [&_*]:text-l z-[-1] bg-black text-white '>
 
-            {finished ? (<div className="flex flex-row flex-wrap h-fit w-screen items-left font-mono justify-start  "><div className="pl-8 w-full h-fit "> {fullMessage}</div>
+            {finished ? (<div className="flex flex-row flex-wrap h-fit w-fit items-left font-mono justify-start  "><div className="pl-8 w-full h-fit "> {fullMessage}</div>
                <div className='pl-8 text-white w-full'>▯</div>
             </div>) :
                 message == fullMessage ? (
