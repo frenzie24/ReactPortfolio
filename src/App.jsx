@@ -83,7 +83,7 @@ export default function App() {
         let timer = setTimeout(() => {
           setBgInput(newtext);
           clearTimeout(timer);
-        }, 50)
+        }, 1)
       }
     }
   }, [bgtext, blob, bgInput])
@@ -151,10 +151,10 @@ export default function App() {
 
       <TypingAnimation useAnimationComplete={handleAnimationComplete} />
 
-      {hidden ? (<></>) : (<div className='absolute top-0 left-0 z-[-2] h-screen w-screen bg-black/25'>
+      {hidden ? (<></>) : (<div className='absolute top-0 left-0 z-[-2] h-screen w-screen bg-black/70'>
         <div ref={headingRef} className={`w-screen h-screen fixed bottom-0 left-0 bg-black text-gray-400 z-[-1] pointer-events-none text-xs font-mono `}>
           <div className='w-full h-full flex items-end'>
-            <h4 className={`w-10/12 h-[${height ? height : 1000}px] text-clip overflow-hidden border-2 border-double border-zinc-800 mx-auto px-4 py-12`}>{...bgInput + '_'}</h4>
+            <h4 className={`w-10/12 h-[${height ? height : 1000}px] text-clip overflow-hidden opacity-50 border-2 border-double border-zinc-800 mx-auto px-4 py-12`}>{...bgInput + '_'}</h4>
           </div>
         </div>
       </div>)}

@@ -23,11 +23,11 @@ function Home() {
     <>
 
 
-        <section className={`flex flex-row flex-wrap max-w-[800px] sm:w-fit flex-wrap py-10 justify-center fadeInAnimation`}>
+        <section className={`flex flex-row flex-wrap max-w-[800px] sm:w-fit flex-wrap justify-center fadeInAnimation`}>
           <ul>
             <li className="pt-8"><AboutMe /></li>
             <li className="pt-8"><Portfolio /></li>
-            <li className='pt-8'><ResumeView /></li>
+            <li className=''><ResumeView /></li>
           </ul>
         </section>
 
