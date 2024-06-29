@@ -3,7 +3,7 @@ import "../App.css"
 export default function Resume() {
     const path = './src/assets/images/resume.png'
     return (
-        <article className='m-4'>
+        <article className='m-4 text-white'>
             <h1 className='font-bold text-2xl'> Charles Gross - Resume</h1>
 
             <h2 className='text-xl font-medium my-1'> Summary</h2>
