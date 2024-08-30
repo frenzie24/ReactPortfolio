@@ -9,7 +9,7 @@ export default function Portfolio() {
   }
   return (
     <div className='w-screen flex flex-row flex-wrap justify-center [&_*]:backdrop-blur-sm  '>
-      <section className="max-w-[800px] sm:w-fit h-fit bg-[#262626]/90 rounded-lg backdrop-blur-sm grid grid-cols-1 md:grid-cols-3 gap-4 p-4 " >
+      <section className="max-w-[800px] sm:w-fit h-fit bg-[#262626]/90 rounded-lg backdrop-blur-sm grid grid-cols-1 md:grid-cols-3 gap-4 p-4 text-white" >
 
         <Tile
           url={'https://oceanviewcleaningco.netlify.app/'}
