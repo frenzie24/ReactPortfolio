@@ -25,9 +25,11 @@ function Home() {
 
         <section className={`flex flex-row flex-wrap max-w-[800px] sm:w-fit flex-wrap justify-center fadeInAnimation`}>
           <ul>
-            <li className="pt-8"><AboutMe /></li>
-            <li className="pt-8"><Portfolio /></li>
+            <li className="py-12"><AboutMe /></li>
             <li className=''><ResumeView /></li>
+            <li className="py-12"><Portfolio /></li>
+
+            <li className='pb-24'><PeonComponent /></li>
           </ul>
         </section>
 

@@ -105,6 +105,8 @@ class Peon {
 
             console.log(`this.frame: ${this.frame}\nthis.reverseFrames: ${this.reverseFrames}`)
             this.loaded = true;
+
+
             //move the peon\
             if (this.moving.x || this.moving.y) {
                 this.move();
@@ -177,7 +179,6 @@ class Peon {
             }
 
         }
-
         this.draw();
         if (this.debugMode) {
             this.timer += 1;

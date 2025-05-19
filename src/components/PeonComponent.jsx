@@ -4,7 +4,7 @@ import Canvas from './Canvas.jsx'
 import Peon from '../scripts/peon.js';
 import React from 'react';
 import { useLocation, useBeforeUnload, useBlocker } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import '../video.css'
 function PeonComponent() {
 
@@ -15,8 +15,9 @@ function PeonComponent() {
   // callback hook to pass to canvas
 
 
-  let peons;
-
+  const [firstRun, setFirstRun] = useState(true);
+  const [music, setMusic] = useState();
+  const [peons, setPeons] = useState([]);
   let debugMode = false;
   let width = 900;
   const height = 500;
@@ -27,17 +28,19 @@ function PeonComponent() {
   topUI.src = "./src/assets/topui.png";
   botUI.src = "./src/assets/bottomui.png";
   bg.src = "https://cdna.artstation.com/p/marketplace/presentation_assets/000/500/478/large/file.jpg?1598966424"
-  let music;
-  let firstRun = true;
+  
+  //let firstRun = true;
   let gameLoop;
   const draw = context => {
 
 
     if (firstRun) {
-      peons = [];
+     //peons = [];
       console.log('pushing new peon')
       let count = 0;
-      peons.push(new Peon(context, debugMode));
+      const _peons = [new Peon(context, debugMode)];
+      setPeons(_peons);
+//      peons.push(new Peon(context, debugMode));
       /*  let peonInterval = setInterval(() => {
         let leon = new Peon(context, debugMode);
 
@@ -52,9 +55,12 @@ function PeonComponent() {
         context.clearRect(0, 0, width, height)
 
         context.drawImage(bg, 0, (height - bg.height) / 2, bg.width, bg.height, 0, (height - bg.height)/2, bg.width*2, bg.height );
-        peons.forEach(peon => {
+//        const _peons = peons;
+
+        _peons.forEach(peon => {
           peon.update();
           if (peon.getDebugMode() != debugMode) peon.setDebugMode(debugMode);
+          peon.draw();
         });
         context.drawImage(topUI, (width - topUI.width) / 2, 0);
         context.drawImage(botUI, (width - botUI.width) / 2, height - botUI.height);
@@ -71,20 +77,24 @@ function PeonComponent() {
 
   function handleCanvasClick(e) {
     if (firstRun) {
-      music = new Audio("./src/assets/sounds/Orc02.mp3");
-      music.addEventListener("canplaythrough", (ev) => {
+      const _music = new Audio("./src/assets/sounds/Orc02.mp3");
+      _music.addEventListener("canplaythrough", (ev) => {
         console.count('loading audtio')
-        music.play()
-        music.volume = 0.25;
+        _music.play()
+        _music.volume = 0.25;
       });
-      music.addEventListener('ended', function () {
-        music.currentTime = 0;
-        music.play();
+      _music.addEventListener('ended', function () {
+        _music.currentTime = 0;
+        _music.play();
       }, false);
-      firstRun = false;
-      peons.map(peon => {
+      setFirstRun(false);
+      const _peons = peons;
+
+      _peons.map(peon => {
         peon.setActive(true);
       });
+      setMusic(_music);
+      setPeons(_peons)
     }
     e.preventDefault();
     const x = e.clientX;
@@ -93,8 +103,9 @@ function PeonComponent() {
 
       if (peon.isLoaded()) {
         peon.setActive(peon.checkClicked(x, y))
+        music.play();
       } //else peon.setActive(true);
-      if (peon.getActive()) music.play();
+     // if (peon.getActive()) //music.play();
       // else music.pause();
       // peon.setActive(true);
 
@@ -108,8 +119,9 @@ function PeonComponent() {
 
       peons.forEach(peon => {
         peon.setActive(!peon.getActive())
-        if (peon.getActive()) music.play();
-        else music.pause();
+        debugger;
+        if (!peon.getActive()){ music.pause();}
+        else music.play();
       })
     }
 
@@ -118,10 +130,10 @@ function PeonComponent() {
   }
 
   useBlocker(() => {
-    debugger;
+  
     if (peons && music) {
-      peons = null; music.pause();
-      peons = undefined; music = undefined;
+      setPeons([]); music.pause();
+     setMusic(undefined)
       clearInterval(gameLoop);
     }
     console.log("URL changed");

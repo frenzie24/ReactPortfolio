@@ -7,14 +7,14 @@ export default function About() {
                 <div className="bg-[#262626]/90 rounded-lg backdrop-blur-sm shadow-md px-8 pt-6 pb-8  w-full">
                     <h2 className="text-2xl font-bold mb-2">About Me</h2>
                     <p className="mb-2">
-                        Hi, I'm Charles Gross, a full-stack developer with 3 years of experience. I specialize in React, JavaScript, CSS, and HTML5 Canvas and I have a passion for creating intuitive and dynamic user experiences.
+                        Hi, I'm Charles Gross, a full-stack developer with 3 years of experience. I specialize in React, JavaScript, CSS, and HTML5 Canvas with a passion for creating intuitive and dynamic user experiences.
                     </p>
                     <p className="mb-2">
-                        I've worked on projects related to website, native application, and game design and devlopment. I'm currently strongest with Tailwind CSS, Node.js, PostgreSQL, React.js, and HTML5.
+                        Contributed to projects related to website, native application, and game design and devlopment. I'm currently strongest with Tailwind CSS, Node.js, PostgreSQL, React.js, and HTML5.
                     </p>
 
                    <p className="mb-2">
-                        I'm currently looking for remote roles where I can continue to grow and contribute. In my spare time, I am enjoying writing a 2d RTS engine for HTML5 canvas.
+                        Currently looking for remote roles where I can continue to grow and contribute. In my spare time, I am enjoying writing a 2d RTS engine for HTML5 canvas.
                     </p>
                 </div>
             </div>

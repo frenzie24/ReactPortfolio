@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function Contact() {
-  const email = 'kevincharlesgross@gmail.com';
+  const email = 'charles.gross.work@gmail.com';
   const githubUsername = 'frenzie24';
 
   return (
@@ -10,15 +10,14 @@ export default function Contact() {
         <div className="shadow-md rounded p-4 ">
 
             <label className="block text-sm text-center font-bold ">Let's Get in Touch!</label>
-            <p className="leading-tight font-medium mb-2">Charles Gross</p>
+      
 
 
             <label className="block text-sm font-bold mb-2">Email: <a href={`mailto:${email}`} className="mb-3 leading-tight text-blue-500 hover:underline">
               {email}
             </a></label>
 
-            <label className="block text-sm font-bold mb-2">GitHub
-            <a
+            <label className="block text-sm font-bold mb-2">GitHub: <a
               href={`https://github.com/${githubUsername}`}
               className="mb-3 leading-tight text-blue-500 hover:underline"
               target="_blank"
@@ -28,9 +27,7 @@ export default function Contact() {
             </a></label>
           <div className="mb-6">
             <label className="block text-sm font-bold mb-2">
-              Availability
-
-            <span className="text-green-700 leading-tight">Available for work!</span> </label>
+              Availability: <span className="text-green-700 leading-tight">Available for work!</span> </label>
           </div>
         </div>
       </div>

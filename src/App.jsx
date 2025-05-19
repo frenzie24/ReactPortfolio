@@ -73,7 +73,7 @@ export default function App() {
         setInputCursor(-1);
         setBgInput([...bgtext, bgInput]);
         //  setBgInput('');
-        debugger;
+        
       }
 
       else {
