@@ -19,7 +19,8 @@ function PeonComponent() {
   const [music, setMusic] = useState();
   const [peons, setPeons] = useState([]);
   let debugMode = false;
-  let width = 900;
+  let width = 900 > window.outerWidth ? window.outerWidth : 900;
+  debugger;
   const height = 500;
   const topUI = new Image();
   const botUI = new Image();
